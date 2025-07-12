@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TestGames 🎮 🕹️</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #111;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+    }
+
+    nav h2 {
+      color: crimson;
+      margin: 0;
+      font-size: 1.4em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: crimson;
+    }
+
+    header {
+      background-image: url('Images/jeux_play.webp');
+      background-size: cover;
+      background-position: center;
+      height: 750px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 4em;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 30px;
+      border-radius: 12px;
+      color: crimson;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 800;
+      box-shadow: 0 0 20px crimson;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .tiles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .tile {
+      width: calc(33.333% - 40px);
+      min-width: 250px;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      color: white;
+      font-weight: bold;
+      font-size: 1.3em;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .tile:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+    }
+
+    .tile_link {
+      text-decoration: none;
+    }
+
+    .description {
+      font-family: 'Courier New', Courier, monospace;
+      color: yellow;
+      text-align: center;
+      padding: 30px;
+      background-color: #111;
+      margin: 0;
+    }
+
+    .logo {
+      display: block;
+      margin: 20px auto;
+      width: 280px;
+      max-width: 90%;
+      height: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: crimson;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .tile {
+        width: calc(50% - 40px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      .tile {
+        width: 100%;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 5px 0 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h2>TestGames</h2>
+    <div>
+      <a href="#">Accueil</a>
+      <a href="#jeux">Jeux</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>🎮 TESTGAMES 🎮</h1>
+  </header>
+  <h2 class="description" id="contact" style="color: crimson;">Les jeux vidéos que nous vous présentons</h2>
+
+  <main>
+    <section class="tiles" id="jeux">
+      <a href="spiderman.html" class="tile_link">
+        <article class="tile" style="background-color: crimson;">Marvel's Spiderman 2</article>
+      </a>
+      <a href="star_wars.html" class="tile_link">
+        <article class="tile" style="background-color: darkgoldenrod;">Star Wars Outlaws</article>
+      </a>
+      <a href="assassin.html" class="tile_link">
+        <article class="tile" style="background-color: dimgrey;">Assassin's Shadows</article>
+      </a>
+      <a href="assassin2.html" class="tile_link">
+        <article class="tile" style="background-color: orange;">Assassin's Creed Mirage</article>
+      </a>
+      <a href="jedi.html" class="tile_link">
+        <article class="tile" style="background-color: lightblue; color: black;">Jedi Survivor</article>
+      </a>
+      <a href="astro.html" class="tile_link">
+        <article class="tile" style="background-color: rgb(0, 4, 255);">Astro Bot</article>
+      </a>
+    </section>
+  </main>
+
+  <section class="description" id="contact">
+    <p>
+      Nous testons plusieurs jeux et avons décidé de vous faire un petit résumé de chacun d'eux.<br>
+      Nous espérons que vous apprécierez notre sélection et que vous trouverez des jeux qui vous plairont.<br>
+      Merci de nous suivre et de soutenir notre passion pour les jeux vidéo 🎮
+    </p>
+  </section>
+  
+  <img src="Images/logo.png" alt="Logo TESTGAMES" class="logo" />
+
+  <footer>
+    &copy; 2025 TESTGAMES – De Nael et Adam El Jabri
+  </footer>
+
+</body>
+</html>
